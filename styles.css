@@ -9,7 +9,7 @@
   /* ### Neutral */
   --White/*(Pricing Component Background)*/: hsl (0, 0%, 100%);
   --Very-Pale-Blue/*(Main Background)*/: hsl(230, 100%, 99%);
-  --Light-Grayish-Blue/*(Empty Slider Bar)*/: hsl(224, 65%, 95%);
+  --Light-Grayish-Blue-b/*(Empty Slider Bar)*/: hsl(224, 65%, 95%);
   --Light-Grayish-Blue/*(Toggle Background)*/: hsl(223, 50%, 87%);
   --Grayish-Blue/*(Text)*/: hsl(225, 20%, 60%);
   --Dark-Desaturated-Blue/*(Text & CTA Background)*/: hsl(227, 35%, 25%);
@@ -58,7 +58,7 @@ html {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 35px;
+  margin-bottom: 25px;
   background-image: url('./images/pattern-circles.svg');
   background-position: center;
   background-repeat: no-repeat;
@@ -67,7 +67,7 @@ html {
 .title h2 {
   font-size: 2rem;
   font-weight: 800;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .title p {
@@ -105,8 +105,6 @@ html {
   text-transform: uppercase;
   letter-spacing: 2px;
 }
-
-
 
 .slider {
   appearance: none;
@@ -156,6 +154,8 @@ html {
   width: 100%;
   font-size: 1.3rem;
   color: var(--Grayish-Blue);
+  padding-bottom: 35px;
+  border-bottom: 1px solid var(--Light-Grayish-Blue);
 }
 
 .toggle-button {
@@ -166,6 +166,7 @@ html {
   background-color: var(--Light-Grayish-Blue);
   border-radius: 50px;
   padding: 0 5px;
+  transition: background-color 0.3s ease;
 }
 
 .toggle-button div {
@@ -173,7 +174,17 @@ html {
   height: 13px;
   background-color: var(--Very-Pale-Blue);
   border-radius: 50%;
+  transition: transform 0.3s ease;
 }
+
+/* animacion toggle background */
+.background-toggle {
+  background-color: var(--Strong-Cyan);
+}
+.active-toggle {
+  transform: translateX(175%);
+}
+/* ------------------------------- */
 
 .yearly span {
   background-color: var(--Light-Grayish-Red);
@@ -184,3 +195,43 @@ html {
   font-weight: 800;
 }
 /* Estilos de date-billing (fin) */
+/* ------------------------------ */
+
+/* Estilos details-offer (inicio) */
+.details-offer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 25px;
+}
+
+.info div {
+  width: 100%;
+  height: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.3rem;
+  color: var(--Grayish-Blue);
+  margin-bottom: 10px;
+}
+
+.info div img {
+  height: fit-content;
+  margin-right: 15px;
+}
+
+.button {
+  width: 180px;
+  height: 45px;
+  background-color: var(--Dark-Desaturated-Blue);
+  color: var(--Light-Grayish-Blue);
+  border: none;
+  border-radius: 50px;
+  font-family: 'Manrope', sans-serif;
+  margin-top: 15px;
+  cursor: pointer;
+}
+/* Estilos details-offer (fin) */
