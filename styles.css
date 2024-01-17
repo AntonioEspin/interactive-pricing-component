@@ -235,3 +235,56 @@ html {
   cursor: pointer;
 }
 /* Estilos details-offer (fin) */
+
+/* media queries */
+@media (min-width: 600px) {
+  .range-price {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+  }
+
+  .amount {
+    width: 35%;
+  }
+
+  .slider {
+    order: 2;
+  }
+  
+  .date-billing {
+    justify-content: flex-end;
+  }
+
+  .date-billing p {
+    margin: 0 20px;
+  }
+
+  .yearly span {
+    margin-left: 5px;
+  }
+
+  .yearly span::after {
+    content: ' discount';
+  }
+
+  .details-offer {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .info div {
+    justify-content: flex-start;
+  }
+
+  .button {
+    margin-top: 0;
+  }
+
+  .main {
+    background-size: contain;
+  }
+}
